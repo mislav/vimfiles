@@ -13,6 +13,8 @@ My configuration uses [Pathogen](https://github.com/tpope/vim-pathogen) and git 
 
 ## Installation:
 
+Prerequisites: ruby, git.
+
 1. Move your existing configuration somewhere else:  
    `mv .vim* .gvim* my_backup`
 2. Clone this repo into ".vim":  
