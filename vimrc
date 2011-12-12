@@ -79,9 +79,6 @@ map Q gq
 " clear the search buffer when hitting return
 :nnoremap <CR> :nohlsearch<cr>
 
-" Insert the current directory into a command
-cmap <C-P> <C-R>=expand("%:p:h") . "/"
-
 let mapleader=","
 
 map <leader>gv :CommandTFlush<cr>\|:CommandT app/views<cr>
