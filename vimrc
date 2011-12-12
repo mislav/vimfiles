@@ -13,6 +13,7 @@ set encoding=utf-8
 call pathogen#infect()
 filetype plugin indent on
 
+set background=dark
 color molokai
 set nonumber
 set ruler       " show the cursor position all the time
