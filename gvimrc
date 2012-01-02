@@ -3,6 +3,9 @@ set guifont=Menlo\ Regular:h14
 set linespace=2
 set antialias
 
+" Remove scrollbar
+set guioptions-=r
+
 " Don't beep
 set visualbell
 
