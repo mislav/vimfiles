@@ -93,6 +93,9 @@ map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 map <leader>F :CommandTFlush<cr>\|:CommandT %%<cr>
 
+" ignore Rubinius, Sass cache files
+set wildignore+=*.rbc,*.scssc,*.sassc
+
 nnoremap <leader><leader> <c-^>
 
 " find merge conflict markers
