@@ -3,7 +3,7 @@
 	url = https://github.com/tpope/vim-fugitive
 [submodule "bundle/haml"]
 	path = bundle/haml
-	url = https://github.com/tpope/vim-haml
+	url = https://github.com/chriseppstein/vim-haml
 [submodule "bundle/javascript"]
 	path = bundle/javascript
 	url = https://github.com/pangloss/vim-javascript
