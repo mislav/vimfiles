@@ -16,9 +16,6 @@
 [submodule "bundle/ruby"]
 	path = bundle/ruby
 	url = https://github.com/vim-ruby/vim-ruby
-[submodule "bundle/scss"]
-	path = bundle/scss
-	url = https://github.com/cakebaker/scss-syntax.vim
 [submodule "bundle/ack"]
 	path = bundle/ack
 	url = https://github.com/mileszs/ack.vim
