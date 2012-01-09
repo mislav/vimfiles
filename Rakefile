@@ -2,6 +2,7 @@ task :default => [:tmp_dirs, :update, :command_t, :link]
 
 desc %(Bring bundles up to date)
 task :update do
+  sh "git submodule sync >/dev/null"
   sh "git submodule update --init"
 end
 
