@@ -6,6 +6,11 @@ task :update do
   sh "git submodule update --init"
 end
 
+desc %(Update submodules to HEAD)
+task :pull_submodules do
+  sh "git submodule foreach git pull origin master >/dev/null"
+end
+
 desc %(Make ~/.vimrc and ~/.gvimrc symlinks)
 task :link do
   %w[vimrc gvimrc].each do |script|
