@@ -94,7 +94,7 @@ cnoremap %% <C-R>=expand('%:h').'/'<cr>
 map <leader>F :CommandTFlush<cr>\|:CommandT %%<cr>
 
 " ignore Rubinius, Sass cache files
-set wildignore+=*.rbc,*.scssc,*.sassc
+set wildignore+=tmp/**,*.rbc,.rbx,*.scssc,*.sassc
 
 nnoremap <leader><leader> <c-^>
 
