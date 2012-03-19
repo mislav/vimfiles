@@ -6,9 +6,13 @@ task :update do
   sh "git submodule update --init"
 end
 
-desc %(Update submodules to HEAD)
-task :pull_submodules do
-  sh "git submodule foreach git pull origin master >/dev/null"
+desc %(Update each submodule from its upstream)
+task :submodule_pull do
+  system %[git submodule foreach '
+        git pull --quiet --ff-only --no-rebase origin master &&
+        git log --no-merges --pretty=format:"%s %Cgreen(%ar)%Creset" --date=relative master@{1}..
+        echo
+      ']
 end
 
 desc %(Make ~/.vimrc and ~/.gvimrc symlinks)
