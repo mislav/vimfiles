@@ -136,3 +136,4 @@ if has("statusline") && !&cp
 endif
 
 let g:CommandTMaxHeight=10
+let g:CommandTMinHeight=4
