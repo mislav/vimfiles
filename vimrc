@@ -20,6 +20,7 @@ set ruler       " show the cursor position all the time
 set cursorline
 set showcmd     " display incomplete commands
 set shell=bash  " avoids munging PATH under zsh
+let g:is_bash=1 " default shell syntax
 set history=200 " remember more Ex commands
 
 " Allow backgrounding buffers without writing them, and remember marks/undo
