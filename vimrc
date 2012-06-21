@@ -12,6 +12,7 @@ set encoding=utf-8
 
 call pathogen#infect()
 filetype plugin indent on
+runtime macros/matchit.vim
 
 set background=dark
 color molokai
