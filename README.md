@@ -108,9 +108,21 @@ In visual mode:
 
 ### Fugitive
 
-* `:Gstatus`, `:Gcommit`
-* `:[range]Gbrowse! -` - copy GitHub URL to code that's currently selected
+* `:Gcommit`
+* `:Gstatus`
+  * jump between lines that represent files with `<c-n>`, `<c-p>`
+  * `-` - add/reset file (visual mode too)
+  * `<Enter>` - open current file in the window below
+  * `p` - run `git add --patch` for current file
+  * `C` - invoke `:Gcommit`
+* `:[range]Gbrowse! -` - copy GitHub URL for code that's currently selected
 * `:[range]Gblame`
+
+* `:Gedit feature:%` - version of the current file in the "feature" branch
+* `:Gwrite` - `add %`
+* `:Gread` - `checkout %`
+* `:Gremove` - `rm %`
+* `:Gmove <dest>` - `mv % <dest>`
 
 ### Pathogen
 
