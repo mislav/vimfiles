@@ -7,15 +7,21 @@
 ""
 
 set nocompatible
-syntax enable
 set encoding=utf-8
 
 call pathogen#infect()
 filetype plugin indent on
 runtime macros/matchit.vim
 
-set background=dark
-color molokai
+syntax enable
+if has('gui_running')
+  set background=light
+else
+  set background=dark
+endif
+let g:solarized_termcolors=256
+colorscheme solarized
+
 set nonumber
 set ruler       " show the cursor position all the time
 set cursorline

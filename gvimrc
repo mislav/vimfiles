@@ -1,4 +1,3 @@
-color vwilight
 set guifont=Menlo\ Regular:h14
 set linespace=2
 set antialias
