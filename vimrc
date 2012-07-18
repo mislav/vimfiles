@@ -11,7 +11,8 @@ set encoding=utf-8
 
 call pathogen#infect()
 filetype plugin indent on
-runtime macros/matchit.vim
+
+runtime macros/matchit.vim  " enables % to cycle through `if/else/endif`
 
 syntax enable
 if has('gui_running')
@@ -22,13 +23,14 @@ endif
 let g:solarized_termcolors=256
 colorscheme solarized
 
-set nonumber
+set nonumber    " line numbers aren't needed
 set ruler       " show the cursor position all the time
-set cursorline
-set showcmd     " display incomplete commands
+set cursorline  " highlight the line of the cursor
+set showcmd     " show partial commands below the status line
 set shell=bash  " avoids munging PATH under zsh
 let g:is_bash=1 " default shell syntax
 set history=200 " remember more Ex commands
+set scrolloff=3 " have some context around the current line always on screen
 
 " Allow backgrounding buffers without writing them, and remember marks/undo
 " for backgrounded buffers
@@ -83,9 +85,6 @@ if has("autocmd")
   au BufNewFile,BufRead *.{md,markdown,html,xml} sy match Comment /\%^---\_.\{-}---$/
 endif
 
-" provide some context when editing
-set scrolloff=3
-
 " don't use Ex mode, use Q for formatting
 map Q gq
 
@@ -105,6 +104,9 @@ map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
 " http://vimcasts.org/e/14
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 map <leader>F :CommandTFlush<cr>\|:CommandT %%<cr>
+
+let g:CommandTMaxHeight=10
+let g:CommandTMinHeight=4
 
 " ignore Rubinius, Sass cache files
 set wildignore+=tmp/**,*.rbc,.rbx,*.scssc,*.sassc
@@ -146,6 +148,3 @@ if has("statusline") && !&cp
   set statusline+=Buf:#%n
   set statusline+=[%b][0x%B]
 endif
-
-let g:CommandTMaxHeight=10
-let g:CommandTMinHeight=4
