@@ -93,6 +93,10 @@ map Q gq
 
 let mapleader=","
 
+" paste lines from unnamed register and fix indentation
+nmap <leader>p pV`]=
+nmap <leader>P PV`]=
+
 map <leader>gv :CommandTFlush<cr>\|:CommandT app/views<cr>
 map <leader>gc :CommandTFlush<cr>\|:CommandT app/controllers<cr>
 map <leader>gm :CommandTFlush<cr>\|:CommandT app/models<cr>
