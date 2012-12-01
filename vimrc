@@ -94,6 +94,9 @@ map Q gq
 " clear the search buffer when hitting return
 :nnoremap <CR> :nohlsearch<cr>
 
+" toggle the current fold
+:nnoremap <Space> za
+
 let mapleader=","
 
 " paste lines from unnamed register and fix indentation
