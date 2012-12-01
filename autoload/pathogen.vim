@@ -177,7 +177,12 @@ command! -bar Helptags :call pathogen#helptags()
 " Like findfile(), but hardcoded to use the runtimepath.
 function! pathogen#runtime_findfile(file,count) "{{{1
   let rtp = pathogen#join(1,pathogen#split(&rtp))
-  return fnamemodify(findfile(a:file,rtp,a:count),':p')
+  let file = findfile(a:file,rtp,a:count)
+  if file ==# ''
+    return ''
+  else
+    return fnamemodify(file,':p')
+  endif
 endfunction " }}}1
 
 " Backport of fnameescape().
@@ -190,6 +195,10 @@ function! pathogen#fnameescape(string) " {{{1
     return substitute(escape(a:string," \t\n*?[{`$\\%#'\"|!<"),'^[+>]','\\&','')
   endif
 endfunction " }}}1
+
+if exists(':Vedit')
+  finish
+endif
 
 function! s:find(count,cmd,file,lcd) " {{{1
   let rtp = pathogen#join(1,pathogen#split(&runtimepath))
@@ -219,7 +228,7 @@ function! s:Findcomplete(A,L,P) " {{{1
   else
     let request = a:A
   endif
-  let pattern = substitute(request,'\'.sep,'*'.sep,'g').'*'
+  let pattern = substitute(request,'/\|\'.sep,'*'.sep,'g').'*'
   let found = {}
   for path in pathogen#split(&runtimepath)
     let path = expand(path, ':p')
@@ -242,4 +251,4 @@ command! -bar -bang -range=1 -nargs=1 -complete=customlist,s:Findcomplete Vtabed
 command! -bar -bang -range=1 -nargs=1 -complete=customlist,s:Findcomplete Vpedit   :execute s:find(<count>,'pedit',<q-args>,<bang>1)
 command! -bar -bang -range=1 -nargs=1 -complete=customlist,s:Findcomplete Vread    :execute s:find(<count>,'read',<q-args>,<bang>1)
 
-" vim:set ft=vim ts=8 sw=2 sts=2:
+" vim:set et sw=2:
