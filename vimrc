@@ -36,6 +36,9 @@ set scrolloff=3 " have some context around the current line always on screen
 " for backgrounded buffers
 set hidden
 
+" Auto-reload buffers when file changed on disk
+set autoread
+
 "" Whitespace
 set nowrap                        " don't wrap lines
 set tabstop=2                     " a tab is two spaces
