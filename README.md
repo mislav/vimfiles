@@ -101,6 +101,13 @@ Text objects:
 * `aM` - a class
 * `iM` - inner class
 
+### CoffeeScript
+
+* `:[range]CoffeeCompile [vert]` - compile JavaScript into new buffer
+* `:CoffeeCompile watch [vert]` - open auto-updating JavaScript buffer
+* `:[range]CoffeeLint` (needs `coffeelint`)
+* `:[range]CoffeeRun` - run the resulting JavaScript
+
 ### matchit.vim
 
 `%` alternates between matching HTML tags, class/control flow statements and
