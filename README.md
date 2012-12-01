@@ -32,6 +32,8 @@ files inside the ".vim" directory.
 * 2 spaces, no tabs
 * incremental, case-insensitive search
 * `<CR>` - remove highlighting after search
+* `<Space>` - toggle current fold
+* vertical split goes right, horizontal split goes below
 * `<C-j/k/h/l>` - switch between splits (no need to prepend `<C-w>`)
 * cursor keys for movement are disabled!
 * `Q` - format lines
