@@ -128,6 +128,9 @@ nmap <silent> <leader>cf <ESC>/\v^[<=>]{7}( .*\|$)<CR>
 
 command! KillWhitespace :normal :%s/ *$//g<cr><c-o><cr>
 
+set splitright
+set splitbelow
+
 " easier navigation between split windows
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
