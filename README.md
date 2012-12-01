@@ -52,6 +52,14 @@ files inside the ".vim" directory.
 * `:AckFromSearch`
 * `:AckAdd` - append to existing quickfix list
 
+In the quickfix window:
+
+* `o` - open file
+* `go` - preview file, i.e. keep focus in quickfix window
+* `t` (`T`) - open in a new tab (silently)
+* `h` (`H`) - open in horizontal split (silently)
+* `v` (`gv`) - open in vertical split (silently)
+
 ### Surround
 
 * `cs"'` - change string from double to single quotes
