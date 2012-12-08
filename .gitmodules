@@ -55,3 +55,6 @@
 [submodule "bundle/markdown-folding"]
 	path = bundle/markdown-folding
 	url = https://github.com/nelstrom/vim-markdown-folding
+[submodule "bundle/eunuch"]
+	path = bundle/eunuch
+	url = https://github.com/tpope/vim-eunuch

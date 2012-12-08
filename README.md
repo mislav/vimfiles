@@ -141,6 +141,15 @@ In visual mode:
 * `:Gremove` - `rm %`
 * `:Gmove <dest>` - `mv % <dest>`
 
+### Eunuch
+
+* `:Rename[!]`
+* `:SudoWrite`
+* `:Remove[!]`
+* `:Find[!] {args}` - run `find` and load results into quickfix
+* when you create a file that starts with a shebang, it gets `chmod +x`
+  automatically on first save!
+
 ### Pathogen
 
 Quickly open vim runtime files:
