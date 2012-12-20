@@ -8,11 +8,14 @@ end
 
 desc %(Update each submodule from its upstream)
 task :submodule_pull do
-  system %[git submodule foreach '
-        git pull --quiet --ff-only --no-rebase origin master &&
-        git log --no-merges --pretty=format:"%s %Cgreen(%ar)%Creset" --date=relative master@{1}..
-        echo
-      ']
+  system <<-EOS
+    git submodule foreach '
+      rev=$(git rev-parse HEAD)
+      git pull --quiet --ff-only --no-rebase origin master &&
+      git --no-pager log --no-merges --pretty=format:"%s %Cgreen(%ar)%Creset" --date=relative ${rev}..
+      echo
+    '
+  EOS
 end
 
 desc %(Make ~/.vimrc and ~/.gvimrc symlinks)
