@@ -120,6 +120,9 @@ map <leader>F :CommandTFlush<cr>\|:CommandT %%<cr>
 let g:CommandTMaxHeight=10
 let g:CommandTMinHeight=4
 
+let g:turbux_command_test_unit = 'ruby -Ilib:test'
+" let g:turbux_command_cucumber = 'cucumber -f progress'
+
 " In command-line mode, C-a jumps to beginning (to match C-e)
 cnoremap <C-a> <Home>
 
