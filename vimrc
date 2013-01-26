@@ -20,10 +20,7 @@ if has('gui_running')
 else
   set background=dark
 endif
-set t_Co=256 " 256 colors
-color grb256
-" let g:solarized_termcolors=256
-" colorscheme solarized
+color railscasts
 
 set nonumber    " line numbers aren't needed
 set ruler       " show the cursor position all the time
