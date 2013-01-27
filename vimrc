@@ -8,6 +8,7 @@
 
 set nocompatible
 set encoding=utf-8
+set exrc                    " load vimrc from current directory
 
 call pathogen#infect()
 filetype plugin indent on
