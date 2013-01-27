@@ -121,6 +121,8 @@ cnoremap <C-a> <Home>
 
 " ignore Rubinius, Sass cache files
 set wildignore+=tmp/**,*.rbc,.rbx,*.scssc,*.sassc
+" ignore Bundler standalone/vendor installs & gems
+set wildignore+=bundle/**,vendor/bundle/**,vendor/cache/**
 
 nnoremap <leader><leader> <c-^>
 
