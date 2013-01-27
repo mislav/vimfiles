@@ -113,6 +113,8 @@ let g:ctrlp_root_markers = ['.git', 'tags']
 let g:turbux_command_test_unit = 'ruby -Ilib:test'
 " let g:turbux_command_cucumber = 'cucumber -f progress'
 
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
 " In command-line mode, C-a jumps to beginning (to match C-e)
 cnoremap <C-a> <Home>
 

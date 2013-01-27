@@ -62,7 +62,7 @@ Inside the CtrlP prompt:
 
 ### Ack
 
-* `:Ack -w foo_bar --no-js --no-css`
+* `:Ack -w foo_bar`
 * `:Ack!` - search, but don't jump to first match
 * `:AckFromSearch`
 * `:AckAdd` - append to existing quickfix list
