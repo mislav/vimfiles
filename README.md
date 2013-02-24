@@ -78,6 +78,7 @@ In the quickfix window:
 In the normal buffer:
 
 * `:cn[ext]`/`:cN/:cp[revious]` - jump to the next/previous match
+* `]q`/`[q` - same as above, with Unimpaired
 * `:ccl` - close the quickfix window
 * `:col[der]`/`:cnew[er]` - show results of previous/next search
 
@@ -187,6 +188,22 @@ In vimdiff view:
 * `:do //2`/`:do //3` - resolve conflict using the version from target/merge branch
 * `:diffu[pdate]` - refresh diff highlighting
 * `:on[ly]`,`<C-w>o` - close windows other than the current one
+
+### Unimpaired
+
+* `[a`/`]a` - `:previous`/`:next`
+* `[A`/`]A` - `:first`/`:last`
+* `[q`/`]q` - `:cprev`/`:cnext`
+* `[Q`/`]Q` - `:cfirst`/`:clast`
+
+* `[n`/`]n` - previous/next conflict marker
+* `[<Space>`/`]<Space>` - add blank lines above/below the cursor
+
+* `[o{opt}`/`]o{opt}`/`co{opt}` - turn on/turn off/toggle option:
+  * `h` - "hlsearch"
+  * `i` - "ignorecase"
+  * `s` - "spell"
+  * `w` - "wrap"
 
 ### Eunuch
 
