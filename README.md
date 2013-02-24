@@ -31,13 +31,13 @@ files inside the ".vim" directory.
 
 * 2 spaces, no tabs
 * incremental, case-insensitive search
+* vertical split goes right, horizontal split goes below
+* cursor keys for movement are disabled!
+
 * `<CR>` - remove highlighting after search
 * `<Space>` - toggle current fold
-* vertical split goes right, horizontal split goes below
 * `<C-j/k/h/l>` - switch between splits (no need to prepend `<C-w>`)
-* cursor keys for movement are disabled!
 * `Q` - format lines
-* `,cf` - search for merge conflicts in buffer
 * `:KillWhitespace` - strip trailing whitespace
 
 ### File switching (CtrlP)

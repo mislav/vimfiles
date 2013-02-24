@@ -127,9 +127,6 @@ set wildignore+=bundle/**,vendor/bundle/**,vendor/cache/**
 " toggle between last open buffers
 nnoremap <leader><leader> <c-^>
 
-" find merge conflict markers
-nmap <silent> <leader>cf <ESC>/\v^[<=>]{7}( .*\|$)<CR>
-
 command! KillWhitespace :normal :%s/ *$//g<cr><c-o><cr>
 
 set splitright
