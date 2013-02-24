@@ -95,10 +95,10 @@ Surround + rails.vim:
 
 ### Commentary
 
-* `\\{motion}` - comment/uncomment lines that {motion} moves over
-* `\\\` - comment/uncomment [count] lines
-* `{Visual}\\` - comment/uncomment the highlighted lines
-* `\\u` - uncomment the current and adjacent commented lines
+* `gc{motion}` - comment/uncomment lines that {motion} moves over
+* `gcc` - comment/uncomment [count] lines
+* `{Visual}gc` - comment/uncomment the highlighted lines
+* `gcu` - uncomment the current and adjacent commented lines
 
 ### ruby.vim
 
@@ -163,16 +163,16 @@ In visual mode:
 * when you create a file that starts with a shebang, it gets `chmod +x`
   automatically on first save!
 
-### Pathogen
+### Scriptease
 
-Quickly open vim runtime files:
-
-* `:Vedit`
-* `:Vsplit`
-* `:Vvsplit`
-* `:Vtabedit`
-* `:Vpedit`
-* `:Vread`
+* `:Vedit` - quickly open a Vim runtime file
+  * `:Vsplit`
+  * `:Vvsplit`
+  * `:Vtabedit`
+  * `:Vpedit`
+  * `:Vread`
+* `:Runtime` - reload runtime files
+* `g!` - eval a motion or selection as VimL and replace it with the result
 
 Example:
 
