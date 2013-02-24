@@ -106,7 +106,7 @@ nmap <leader>P PV`]=
 " http://vimcasts.org/e/14
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 
-map <C-P> :CtrlP %%<cr>
+map <leader>F :CtrlP %%<cr>
 map <leader>b :CtrlPBuffer<cr>
 let g:ctrlp_root_markers = ['.git', 'tags']
 " let g:ctrlp_extensions = ['tag', 'buffertag']
@@ -124,6 +124,7 @@ set wildignore+=tmp/**,*.rbc,.rbx,*.scssc,*.sassc
 " ignore Bundler standalone/vendor installs & gems
 set wildignore+=bundle/**,vendor/bundle/**,vendor/cache/**
 
+" toggle between last open buffers
 nnoremap <leader><leader> <c-^>
 
 " find merge conflict markers
