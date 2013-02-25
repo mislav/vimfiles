@@ -86,6 +86,13 @@ if has("autocmd")
 
   " mark Jekyll YAML frontmatter as comment
   au BufNewFile,BufRead *.{md,markdown,html,xml} sy match Comment /\%^---\_.\{-}---$/
+
+  " magic markers: enable using `H/S/J/C to jump back to
+  " last HTML, stylesheet, JS or Ruby code buffer
+  au BufLeave *.{erb,html}      exe "normal! mH"
+  au BufLeave *.{css,scss,sass} exe "normal! mS"
+  au BufLeave *.{js,coffee}     exe "normal! mJ"
+  au BufLeave *.{rb}            exe "normal! mC"
 endif
 
 " don't use Ex mode, use Q for formatting
