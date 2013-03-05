@@ -46,6 +46,11 @@ set shiftwidth=2                  " an autoindent (with <<) is two spaces
 set expandtab                     " use spaces, not tabs
 set list                          " Show invisible characters
 set backspace=indent,eol,start    " backspace through everything in insert mode
+" Joining lines
+if v:version > 7.03
+  set formatoptions+=j            " Delete comment char when joining commented lines
+endif
+set nojoinspaces                  " Use only 1 space after "." when joining lines, not 2
 " List chars
 set listchars=""                  " Reset the listchars
 set listchars=tab:\ \             " a tab should display as "  ", trailing whitespace as "."
@@ -54,6 +59,7 @@ set listchars+=extends:>          " The character to show in the last column whe
                                   " off and the line continues beyond the right of the screen
 set listchars+=precedes:<         " The character to show in the first column when wrap is
                                   " off and the line continues beyond the left of the screen
+
 "" Searching
 set hlsearch                      " highlight matches
 set incsearch                     " incremental searching
