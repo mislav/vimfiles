@@ -1,4 +1,4 @@
-task :default => [:tmp_dirs, :update, :link, :macvim_check]
+task :default => [:update, :link, :macvim_check]
 
 desc %(Bring bundles up to date)
 task :update do
@@ -28,11 +28,6 @@ task :link do
       ln_s File.join('.vim', script), dotfile
     end
   end
-end
-
-task :tmp_dirs do
-  mkdir_p "_backup"
-  mkdir_p "_temp"
 end
 
 task :macvim_check do
