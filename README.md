@@ -161,6 +161,7 @@ In visual mode:
   * `<CR>` - q, then open commit
   * `o`/`O` - open commit in horizontal split / new tab
   * `-` - reblame at commit
+  * `P` - reblame at parent commit
 
 * `:Gedit feature:%` - version of the current file in the "feature" branch
 * `:Gwrite` - `add %`
