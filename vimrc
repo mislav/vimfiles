@@ -136,6 +136,7 @@ cnoremap <C-a> <Home>
 set wildignore+=tmp/**,*.rbc,.rbx,*.scssc,*.sassc
 " ignore Bundler standalone/vendor installs & gems
 set wildignore+=bundle/**,vendor/bundle/**,vendor/cache/**
+set wildignore+=node_modules/**
 
 " toggle between last open buffers
 nnoremap <leader><leader> <c-^>
