@@ -199,17 +199,9 @@ map <Up>    :echo "no!"<cr>
 map <Down>  :echo "no!"<cr>
 
 if has("statusline") && !&cp
-  set laststatus=2  " always show the status bar
-
-  " Start the status line
-  set statusline=%f\ %m\ %r
-
-  " Add fugitive
+  set laststatus=2              " always show the status bar
+  set statusline=%f\ %m\ %r     " filename, modified, readonly
   set statusline+=%{fugitive#statusline()}
-
-  " Finish the statusline
-  set statusline+=Line:%l/%L[%p%%]
-  set statusline+=Col:%v
-  set statusline+=Buf:#%n
-  set statusline+=[%b][0x%B]
+  set statusline+=\ %l/%L[%p%%] " current line/total lines
+  set statusline+=\ %v[0x%B]    " current column [hex char]
 endif
