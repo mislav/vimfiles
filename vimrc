@@ -40,6 +40,9 @@ set hidden
 " Auto-reload buffers when file changed on disk
 set autoread
 
+" Disable swap files; systems don't crash that often these days
+set updatecount=0
+
 " Make Vim able to edit crontab files again.
 set backupskip=/tmp/*,/private/tmp/*"
 
@@ -51,9 +54,7 @@ set expandtab                     " use spaces, not tabs
 set list                          " Show invisible characters
 set backspace=indent,eol,start    " backspace through everything in insert mode
 " Joining lines
-if v:version > 7.03
-  set formatoptions+=j            " Delete comment char when joining commented lines
-endif
+set formatoptions+=j              " Delete comment char when joining commented lines
 set nojoinspaces                  " Use only 1 space after "." when joining lines, not 2
 " Indicator chars
 set listchars=tab:▸\ ,trail:•,extends:❯,precedes:❮
@@ -196,8 +197,6 @@ map <Left>  :echo "no!"<cr>
 map <Right> :echo "no!"<cr>
 map <Up>    :echo "no!"<cr>
 map <Down>  :echo "no!"<cr>
-
-set updatecount=0   " disable swap files
 
 if has("statusline") && !&cp
   set laststatus=2  " always show the status bar
