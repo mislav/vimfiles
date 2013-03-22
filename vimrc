@@ -164,7 +164,7 @@ let g:tmux_is_last_pane = 0
 au WinEnter * let g:tmux_is_last_pane = 0
 
 " Like `wincmd` but also change tmux panes instead of vim windows when needed.
-function TmuxWinCmd(direction)
+function s:TmuxWinCmd(direction)
   let nr = winnr()
   let tmux_last_pane = (a:direction == 'p' && g:tmux_is_last_pane)
   if !tmux_last_pane
@@ -186,11 +186,11 @@ function TmuxWinCmd(direction)
 endfunction
 
 " navigate between split windows/tmux panes
-nmap <c-j> :call TmuxWinCmd('j')<cr>
-nmap <c-k> :call TmuxWinCmd('k')<cr>
-nmap <c-h> :call TmuxWinCmd('h')<cr>
-nmap <c-l> :call TmuxWinCmd('l')<cr>
-nmap <c-\> :call TmuxWinCmd('p')<cr>
+nmap <c-j> :call <SID>TmuxWinCmd('j')<cr>
+nmap <c-k> :call <SID>TmuxWinCmd('k')<cr>
+nmap <c-h> :call <SID>TmuxWinCmd('h')<cr>
+nmap <c-l> :call <SID>TmuxWinCmd('l')<cr>
+nmap <c-\> :call <SID>TmuxWinCmd('p')<cr>
 
 " disable cursor keys in normal mode
 map <Left>  :echo "no!"<cr>
