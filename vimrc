@@ -22,6 +22,7 @@ else
   set background=dark
 endif
 color railscasts
+set synmaxcol=800           " don't try to highlight long lines
 
 set nonumber    " line numbers aren't needed
 set ruler       " show the cursor position all the time
@@ -39,6 +40,9 @@ set hidden
 " Auto-reload buffers when file changed on disk
 set autoread
 
+" Make Vim able to edit crontab files again.
+set backupskip=/tmp/*,/private/tmp/*"
+
 "" Whitespace
 set nowrap                        " don't wrap lines
 set tabstop=2                     " a tab is two spaces
@@ -51,20 +55,22 @@ if v:version > 7.03
   set formatoptions+=j            " Delete comment char when joining commented lines
 endif
 set nojoinspaces                  " Use only 1 space after "." when joining lines, not 2
-" List chars
-set listchars=""                  " Reset the listchars
-set listchars=tab:\ \             " a tab should display as "  ", trailing whitespace as "."
-set listchars+=trail:.            " show trailing spaces as dots
-set listchars+=extends:>          " The character to show in the last column when wrap is
-                                  " off and the line continues beyond the right of the screen
-set listchars+=precedes:<         " The character to show in the first column when wrap is
-                                  " off and the line continues beyond the left of the screen
+" Indicator chars
+set listchars=tab:▸\ ,trail:•,extends:❯,precedes:❮
+set showbreak=↪\ 
 
 "" Searching
 set hlsearch                      " highlight matches
 set incsearch                     " incremental searching
 set ignorecase                    " searches are case insensitive...
 set smartcase                     " ... unless they contain at least one capital letter
+set gdefault                      " have :s///g flag by default on
+
+" Time out on key codes but not mappings.
+" Basically this makes terminal Vim work sanely.
+set notimeout
+set ttimeout
+set ttimeoutlen=100
 
 function s:setupWrapping()
   set wrap
@@ -73,6 +79,10 @@ function s:setupWrapping()
 endfunction
 
 if has("autocmd")
+  " Avoid showing trailing whitespace when in insert mode
+  au InsertEnter * :set listchars-=trail:•
+  au InsertLeave * :set listchars+=trail:•
+
   " In Makefiles, use real tabs, not tabs expanded to spaces
   au FileType make set noexpandtab
 
