@@ -206,6 +206,9 @@ In vimdiff view:
   * `s` - "spell"
   * `w` - "wrap"
 
+* `yp/P/o/O/I/A` enters insert mode as with `a/i/o/O/I/A` and sets `paste`.
+  Leaving insert mode sets 'nopaste' automatically.
+
 ### Eunuch
 
 * `:Rename[!]`
