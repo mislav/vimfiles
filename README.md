@@ -232,3 +232,12 @@ In vimdiff view:
 Example:
 
     :Vsp s/pd<Tab>
+
+### Tbone
+
+* `:Tmux [args]` - execute a tmux command
+* `:[range]Tyank/:Tput [buffer]` - access to tmux buffer
+* `:[range]Twrite [pane]` - `tmux send-keys` to another pane
+
+Examples how to specify a pane: windowtitle.2, top-right, or last; or let it
+default to the previously given argument.
