@@ -137,7 +137,8 @@ cnoremap %% <C-R>=expand('%:h').'/'<cr>
 
 map <leader>F :CtrlP %%<cr>
 map <leader>b :CtrlPBuffer<cr>
-let g:ctrlp_root_markers = ['.git', 'Rakefile']
+" let g:ctrlp_root_markers = ['.git', 'Rakefile']
+let g:ctrlp_working_path_mode = 0
 " let g:ctrlp_extensions = ['tag', 'buffertag']
 
 let g:turbux_command_test_unit = 'ruby -Ilib:test'
