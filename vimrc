@@ -60,7 +60,7 @@ endif
 set nojoinspaces                  " Use only 1 space after "." when joining lines, not 2
 " Indicator chars
 set listchars=tab:▸\ ,trail:•,extends:❯,precedes:❮
-set showbreak=↪\ 
+set showbreak=↪˒
 
 "" Searching
 set hlsearch                      " highlight matches
