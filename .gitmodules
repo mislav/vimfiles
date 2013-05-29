@@ -73,3 +73,6 @@
 [submodule "bundle/tbone"]
 	path = bundle/tbone
 	url = https://github.com/tpope/vim-tbone
+[submodule "bundle/dispatch"]
+	path = bundle/dispatch
+	url = https://github.com/tpope/vim-dispatch
