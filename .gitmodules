@@ -79,3 +79,6 @@
 [submodule "bundle/ragel"]
 	path = bundle/ragel
 	url = https://github.com/jayferd/ragel.vim
+[submodule "bundle/visual-star-search"]
+	path = bundle/visual-star-search
+	url = https://github.com/nelstrom/vim-visual-star-search
