@@ -76,3 +76,6 @@
 [submodule "bundle/dispatch"]
 	path = bundle/dispatch
 	url = https://github.com/tpope/vim-dispatch
+[submodule "bundle/ragel"]
+	path = bundle/ragel
+	url = https://github.com/jayferd/ragel.vim

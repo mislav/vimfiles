@@ -76,6 +76,10 @@ set notimeout
 set ttimeout
 set ttimeoutlen=100
 
+" Ragel syntax (default to ruby as host language)
+let g:ragel_default_subtype='ruby'
+autocmd BufNewFile,BufRead *.rl setfiletype ragel
+
 function s:setupWrapping()
   set wrap
   set wrapmargin=2
