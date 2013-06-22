@@ -82,3 +82,6 @@
 [submodule "bundle/visual-star-search"]
 	path = bundle/visual-star-search
 	url = https://github.com/nelstrom/vim-visual-star-search
+[submodule "bundle/tmux-navigator"]
+	path = bundle/tmux-navigator
+	url = https://github.com/christoomey/vim-tmux-navigator
