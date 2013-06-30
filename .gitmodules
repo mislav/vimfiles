@@ -22,6 +22,9 @@
 [submodule "bundle/endwise"]
 	path = bundle/endwise
 	url = https://github.com/tpope/vim-endwise
+[submodule "bundle/command-t"]
+	path = bundle/command-t
+	url = https://github.com/wincent/Command-T
 [submodule "bundle/coffee-script"]
 	path = bundle/coffee-script
 	url = https://github.com/kchmck/vim-coffee-script
@@ -61,9 +64,6 @@
 [submodule "bundle/turbux"]
 	path = bundle/turbux
 	url = https://github.com/jgdavey/vim-turbux
-[submodule "bundle/ctrlp"]
-	path = bundle/ctrlp
-	url = https://github.com/kien/ctrlp.vim
 [submodule "bundle/scriptease"]
 	path = bundle/scriptease
 	url = https://github.com/tpope/vim-scriptease

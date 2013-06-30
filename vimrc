@@ -137,14 +137,18 @@ let mapleader=","
 nmap <leader>p pV`]=
 nmap <leader>P PV`]=
 
+" expand %% to current directory in command-line mode
 " http://vimcasts.org/e/14
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 
-map <leader>F :CtrlP %%<cr>
-map <leader>b :CtrlPBuffer<cr>
-" let g:ctrlp_root_markers = ['.git', 'Rakefile']
-let g:ctrlp_working_path_mode = 0
-" let g:ctrlp_extensions = ['tag', 'buffertag']
+map <leader>gl :CommandTFlush<cr>\|:CommandT lib<cr>
+map <leader>gt :CommandTTag<cr>
+map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
+map <leader>F :CommandTFlush<cr>\|:CommandT %%<cr>
+
+let g:CommandTMatchWindowAtTop=1
+let g:CommandTMaxHeight=10
+let g:CommandTMinHeight=2
 
 let g:turbux_command_test_unit = 'ruby -Ilib:test'
 " let g:turbux_command_cucumber = 'cucumber -f progress'

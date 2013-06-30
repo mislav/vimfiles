@@ -40,25 +40,19 @@ files inside the ".vim" directory.
 * `Q` - format lines
 * `:KillWhitespace` - strip trailing whitespace
 
-### File switching (CtrlP)
+### File switching (Command-T)
 
-* `,,` - toggle between two recently open buffers
-* `<C-p>` - fuzzy file search
-* `<C-P>` - search in directory of current buffer
-* `:CtrlP [dir]` - search files
-* `:CtrlBuffer` - search buffers
-* `:CtrlPTag` - search tags
-* `:CtrlPBufTag` - search tags in current buffer
-* `:CtrlPMixed` - search in files, buffers and MRU
-
-Inside the CtrlP prompt:
-
-* `<C-j/k>` - move down/up between file matches
-* `<C-n/p>` - next/previous string in prompt's history
-* `<C-s/v>` - open file in new horizontal/vertical split
-* `<C-y>` - create a new file and its parent directories
-* `<C-z>` - mark a file to be opened with `<C-o>`
-* `<C-o>` - open marked files
+* `,,` alternates between two most recent buffers
+* `,f` - jump to file:
+  * `,F` - search in directory of current buffer
+  * `,b` - search buffer list
+  * `,gl` - search in `lib/`
+  * `,gt` - search tags
+  * `<C-s>`,`<C-CR>` - open the selected file in a new split window
+  * `<C-v>` - open the selected file in a new vertical split window
+  * `<C-t>` - open the selected file in a new tab
+  * `<C-j>` - select next file in the file listing
+  * `<C-k>` - select previous file in the file listing
 
 ### Ack
 
