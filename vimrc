@@ -91,8 +91,9 @@ if has("autocmd")
   au InsertEnter * :set listchars-=trail:•
   au InsertLeave * :set listchars+=trail:•
 
-  " In Makefiles, use real tabs, not tabs expanded to spaces
+  " Some file types use real tabs
   au FileType make set noexpandtab
+  au FileType gitconfig set noexpandtab
 
   " Make sure all markdown files have the correct filetype set and setup wrapping
   au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn,txt} setf markdown | call s:setupWrapping()
