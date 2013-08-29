@@ -53,6 +53,7 @@ files inside the ".vim" directory.
   * `<C-t>` - open the selected file in a new tab
   * `<C-j>` - select next file in the file listing
   * `<C-k>` - select previous file in the file listing
+  * `<C-f>` - flush file cache
 
 ### Ack
 

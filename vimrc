@@ -145,10 +145,10 @@ nmap <leader>P PV`]=
 " http://vimcasts.org/e/14
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 
-map <leader>gl :CommandTFlush<cr>\|:CommandT lib<cr>
+map <leader>gl :CommandT lib<cr>
 map <leader>gt :CommandTTag<cr>
-map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
-map <leader>F :CommandTFlush<cr>\|:CommandT %%<cr>
+map <leader>f :CommandT<cr>
+map <leader>F :CommandT %%<cr>
 
 let g:CommandTMatchWindowAtTop=1
 let g:CommandTMaxHeight=10
