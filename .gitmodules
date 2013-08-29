@@ -85,3 +85,6 @@
 [submodule "bundle/tmux-navigator"]
 	path = bundle/tmux-navigator
 	url = https://github.com/christoomey/vim-tmux-navigator
+[submodule "bundle/argumentative"]
+	path = bundle/argumentative
+	url = https://github.com/PeterRincker/vim-argumentative

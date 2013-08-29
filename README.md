@@ -94,6 +94,12 @@ Surround + rails.vim:
 * `e` - nest block and append `end` keyword
 * `E` - like `e`, but prompt for text to prepend before block
 
+### Argumentative
+
+* `[,`/`],` - go to previous/next argument boundary
+* `<,`/`>,` - shift current argument left/right
+* `a,`/`i,` - "an argument"/"inner argument" text object
+
 ### Commentary
 
 * `gc{motion}` - comment/uncomment lines that {motion} moves over
