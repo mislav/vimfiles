@@ -78,7 +78,6 @@ set ttimeoutlen=100
 
 " Ragel syntax (default to ruby as host language)
 let g:ragel_default_subtype='ruby'
-autocmd BufNewFile,BufRead *.rl setfiletype ragel
 
 function s:setupWrapping()
   set wrap
@@ -86,14 +85,16 @@ function s:setupWrapping()
   set textwidth=80
 endfunction
 
-if has("autocmd")
+augroup vimrcEx
+  " Clear all autocmds in the group
+  autocmd!
+
   " Avoid showing trailing whitespace when in insert mode
   au InsertEnter * :set listchars-=trail:•
   au InsertLeave * :set listchars+=trail:•
 
   " Some file types use real tabs
-  au FileType make set noexpandtab
-  au FileType gitconfig set noexpandtab
+  au FileType {make,gitconfig} set noexpandtab
 
   " Make sure all markdown files have the correct filetype set and setup wrapping
   au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn,txt} setf markdown | call s:setupWrapping()
@@ -103,6 +104,8 @@ if has("autocmd")
 
   " https://github.com/sstephenson/bats
   au BufNewFile,BufRead *.bats setf sh
+
+  au BufNewFile,BufRead *.rl setfiletype ragel
 
   " make Python follow PEP8 ( http://www.python.org/dev/peps/pep-0008/ )
   au FileType python set softtabstop=4 tabstop=4 shiftwidth=4 textwidth=79
@@ -121,7 +124,7 @@ if has("autocmd")
   au BufLeave *.{css,scss,sass} exe "normal! mS"
   au BufLeave *.{js,coffee}     exe "normal! mJ"
   au BufLeave *.{rb}            exe "normal! mC"
-endif
+augroup END
 
 " don't use Ex mode, use Q for formatting
 map Q gq
