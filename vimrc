@@ -61,7 +61,6 @@ set nojoinspaces                  " Use only 1 space after "." when joining line
 " Indicator chars
 set listchars=tab:▸\ ,trail:•,extends:❯,precedes:❮
 set showbreak=↪\ 
-set sidescroll=5                  " minimum number of columns to scroll horizontally
 
 "" Searching
 set hlsearch                      " highlight matches
