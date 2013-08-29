@@ -185,6 +185,10 @@ set wildignore+=node_modules/**
 " toggle between last open buffers
 nnoremap <leader><leader> <c-^>
 
+command! GdiffInTab tabedit %|vsplit|Gdiff
+nnoremap <leader>d :GdiffInTab<cr>
+nnoremap <leader>D :tabclose<cr>
+
 command! KillWhitespace :normal :%s/ *$//g<cr><c-o><cr>
 
 " populate arglist with files from the quickfix list
