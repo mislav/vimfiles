@@ -136,6 +136,9 @@ map Q gq
 
 let mapleader=","
 
+" yank to system clipboard
+map <leader>y "*y
+
 " paste lines from unnamed register and fix indentation
 nmap <leader>p pV`]=
 nmap <leader>P PV`]=
