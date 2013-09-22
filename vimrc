@@ -78,7 +78,7 @@ set ttimeoutlen=100
 " Ragel syntax (default to ruby as host language)
 let g:ragel_default_subtype='ruby'
 
-function s:setupWrapping()
+function! s:setupWrapping()
   set wrap
   set wrapmargin=2
   set textwidth=80
