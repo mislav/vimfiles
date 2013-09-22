@@ -179,7 +179,7 @@ inoremap <s-tab> <c-n>
 " ignore Rubinius, Sass cache files
 set wildignore+=tmp/**,*.rbc,.rbx,*.scssc,*.sassc
 " ignore Bundler standalone/vendor installs & gems
-set wildignore+=bundle/**,vendor/bundle/**,vendor/cache/**
+set wildignore+=bundle/**,vendor/bundle/**,vendor/cache/**,vendor/gems/**
 set wildignore+=node_modules/**
 
 " toggle between last open buffers
