@@ -170,11 +170,11 @@ function! InsertTabWrapper()
   if !col || getline('.')[col - 1] !~ '\k'
     return "\<tab>"
   else
-    return "\<c-p>"
+    return "\<c-n>"
   endif
 endfunction
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
-inoremap <s-tab> <c-n>
+inoremap <s-tab> <c-p>
 
 " ignore Rubinius, Sass cache files
 set wildignore+=tmp/**,*.rbc,.rbx,*.scssc,*.sassc
