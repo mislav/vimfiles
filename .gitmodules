@@ -1,9 +1,6 @@
 [submodule "bundle/fugitive"]
 	path = bundle/fugitive
 	url = https://github.com/tpope/vim-fugitive
-[submodule "bundle/haml"]
-	path = bundle/haml
-	url = https://github.com/chriseppstein/vim-haml
 [submodule "bundle/javascript"]
 	path = bundle/javascript
 	url = https://github.com/pangloss/vim-javascript
@@ -43,9 +40,6 @@
 [submodule "bundle/puppet"]
 	path = bundle/puppet
 	url = https://github.com/rodjek/vim-puppet/
-[submodule "bundle/solarized"]
-	path = bundle/solarized
-	url = https://github.com/altercation/vim-colors-solarized
 [submodule "bundle/repeat"]
 	path = bundle/repeat
 	url = https://github.com/tpope/vim-repeat
@@ -55,12 +49,6 @@
 [submodule "bundle/eunuch"]
 	path = bundle/eunuch
 	url = https://github.com/tpope/vim-eunuch
-[submodule "bundle/vimux"]
-	path = bundle/vimux
-	url = https://github.com/benmills/vimux
-[submodule "bundle/turbux"]
-	path = bundle/turbux
-	url = https://github.com/jgdavey/vim-turbux
 [submodule "bundle/scriptease"]
 	path = bundle/scriptease
 	url = https://github.com/tpope/vim-scriptease
