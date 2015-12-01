@@ -102,7 +102,7 @@ augroup vimrcEx
   au BufNewFile,BufRead *.json setf javascript
 
   " https://github.com/sstephenson/bats
-  au BufNewFile,BufRead *.bats setf sh
+  au BufNewFile,BufRead *.bats setl filetype=sh
 
   au BufNewFile,BufRead *.rl setfiletype ragel
 
