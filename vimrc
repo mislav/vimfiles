@@ -93,7 +93,7 @@ augroup vimrcEx
   au InsertLeave * :set listchars+=trail:•
 
   " Some file types use real tabs
-  au FileType {make,gitconfig} setl noexpandtab
+  au FileType {make,gitconfig,go} setl noexpandtab
 
   " Make sure all markdown files have the correct filetype set and setup wrapping
   au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn,txt} setf markdown | call s:setupWrapping()
