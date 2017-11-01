@@ -161,6 +161,9 @@ let g:turbux_command_test_unit = 'ruby -Ilib:test'
 
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
+let g:flow#enable = 0
+let g:flow#autoclose = 1
+
 " In command-line mode, C-a jumps to beginning (to match C-e)
 cnoremap <C-a> <Home>
 

@@ -73,3 +73,6 @@
 [submodule "bundle/argumentative"]
 	path = bundle/argumentative
 	url = https://github.com/PeterRincker/vim-argumentative
+[submodule "bundle/flow"]
+	path = bundle/flow
+	url = https://github.com/flowtype/vim-flow.git
