@@ -76,3 +76,6 @@
 [submodule "bundle/flow"]
 	path = bundle/flow
 	url = https://github.com/flowtype/vim-flow.git
+[submodule "bundle/papercolor"]
+	path = bundle/papercolor
+	url = https://github.com/NLKNguyen/papercolor-theme.git

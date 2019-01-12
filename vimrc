@@ -15,13 +15,14 @@ filetype plugin indent on
 
 runtime macros/matchit.vim  " enables % to cycle through `if/else/endif`
 
+set termguicolors
 syntax enable
 if has('gui_running')
   set background=light
 else
   set background=dark
 endif
-color railscasts
+color PaperColor
 set synmaxcol=800           " don't try to highlight long lines
 set re=1
 
@@ -215,12 +216,14 @@ map <Up>    :echo "no!"<cr>
 map <Down>  :echo "no!"<cr>
 
 if has("statusline") && !&cp
-  set laststatus=2                   " always show the status bar
-  set statusline=%<%1*\ %f\ %*       " filename
-  set statusline+=%2*%m%r%*          " modified, readonly
-  set statusline+=\ %3*%y%*          " filetype
-  set statusline+=\ %4*%{fugitive#head()}%0*
-  set statusline+=%=                 " left-right separation point
-  set statusline+=\ %5*%l%*/%L[%p%%] " current line/total lines
-  set statusline+=\ %5*%v%*[0x%B]    " current column [hex char]
+  set laststatus=2                      " always show the status bar
+  set statusline=%<%1*\ %f\ %0*         " filename
+  set statusline+=\ %m%r                " modified, readonly
+  set statusline+=\ %y                  " filetype
+  set statusline+=\ %{fugitive#head()}
+  set statusline+=%=                    " left-right separation point
+  set statusline+=\ %l/%L[%p%%]         " current line/total lines
+  set statusline+=\ %v[0x%B]            " current column [hex char]
+
+  hi User1 ctermfg=0 ctermbg=6
 endif
