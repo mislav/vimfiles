@@ -129,9 +129,6 @@ augroup END
 " don't use Ex mode, use Q for formatting
 map Q gq
 
-" clear the search buffer when hitting return
-:nnoremap <CR> :nohlsearch<cr>
-
 " toggle the current fold
 :nnoremap <Space> za
 
