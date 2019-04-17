@@ -79,3 +79,6 @@
 [submodule "bundle/papercolor"]
 	path = bundle/papercolor
 	url = https://github.com/NLKNguyen/papercolor-theme.git
+[submodule "bundle/eslint"]
+	path = bundle/eslint
+	url = https://github.com/dgraham/vim-eslint
